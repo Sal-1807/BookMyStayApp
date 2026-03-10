@@ -1,6 +1,24 @@
 import java.util.HashMap;
 
 public class BookMyStayApp {
+
+    static class RoomSearchService {
+
+        void search(RoomInventory inv){
+
+            System.out.println("Available Rooms:");
+
+            for(String type:inv.inventory.keySet()){
+
+                if(inv.inventory.get(type)>0)
+                    System.out.println(type+" Available:"+inv.inventory.get(type));
+
+            }
+
+        }
+
+    }
+
     static class RoomInventory {
 
         HashMap<String,Integer> inventory=new HashMap<>();
@@ -77,5 +95,8 @@ public class BookMyStayApp {
 
         RoomInventory inv=new RoomInventory();
         inv.displayInventory();
+
+        RoomSearchService search=new RoomSearchService();
+        search.search(inv);
     }
 }
