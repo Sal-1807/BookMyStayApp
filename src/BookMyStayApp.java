@@ -1,7 +1,41 @@
 import java.util.HashMap;
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Set;
+import java.util.HashSet;
+
 public class BookMyStayApp {
+
+    static class BookingService {
+
+        Set<String> allocated=new HashSet<>();
+
+        void allocate(Reservation r,RoomInventory inv){
+
+            if(inv.inventory.get(r.roomType)<=0){
+
+                System.out.println("No rooms available for "+r.guest);
+                return;
+
+            }
+
+            String id;
+
+            do{
+                id=r.roomType.charAt(0)+""+(int)(Math.random()*100);
+            }
+            while(allocated.contains(id));
+
+            allocated.add(id);
+
+            inv.inventory.put(r.roomType,
+                    inv.inventory.get(r.roomType)-1);
+
+            System.out.println("Reservation Confirmed for "+r.guest+" Room ID:"+id);
+
+        }
+
+    }
 
     static class Reservation {
 
@@ -126,6 +160,19 @@ public class BookMyStayApp {
         RoomSearchService search=new RoomSearchService();
         search.search(inv);
 
+        BookingService service=new BookingService();
+
+        Reservation req;
+
+        BookingQueue queue = null;
+        while(true) {
+            assert false;
+            if ((req = queue.nextRequest()) == null) break;
+
+            service.allocate(req, inv);
+
+
+        }
 
     }
 }
