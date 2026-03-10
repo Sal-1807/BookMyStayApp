@@ -1,5 +1,26 @@
+import java.util.HashMap;
 
 public class BookMyStayApp {
+    static class RoomInventory {
+
+        HashMap<String,Integer> inventory=new HashMap<>();
+
+        RoomInventory(){
+
+            inventory.put("Single Room",5);
+            inventory.put("Double Room",3);
+            inventory.put("Suite Room",2);
+
+        }
+
+        void displayInventory(){
+
+            for(String type:inventory.keySet())
+                System.out.println(type+" Available:"+inventory.get(type));
+
+        }
+    }
+
     abstract static class Room {
 
         String type;
@@ -53,5 +74,8 @@ public class BookMyStayApp {
 
         suite.displayRoom();
         System.out.println("Available:"+suiteAvailable);
+
+        RoomInventory inv=new RoomInventory();
+        inv.displayInventory();
     }
 }
