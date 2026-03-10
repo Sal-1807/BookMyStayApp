@@ -1,6 +1,33 @@
 import java.util.HashMap;
-
+import java.util.Queue;
+import java.util.LinkedList;
 public class BookMyStayApp {
+
+    static class Reservation {
+
+        String guest;
+        String roomType;
+
+        Reservation(String g,String r){
+            guest=g;
+            roomType=r;
+        }
+
+    }
+
+    static class BookingQueue {
+
+        Queue<Reservation> queue=new LinkedList<>();
+
+        void addRequest(Reservation r){
+            queue.offer(r);
+        }
+
+        Reservation nextRequest(){
+            return queue.poll();
+        }
+
+    }
 
     static class RoomSearchService {
 
@@ -98,5 +125,7 @@ public class BookMyStayApp {
 
         RoomSearchService search=new RoomSearchService();
         search.search(inv);
+
+
     }
 }
