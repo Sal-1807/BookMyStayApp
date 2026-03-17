@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/BookMyStayApp540" vcs="Git" />
+=======
+>>>>>>> 63b43c5f1268fa224cf37be3870a8ca6a939f643
   </component>
 </project>

@@ -3,7 +3,7 @@ import java.util.*;
 // MAIN CLASS
 public class BookMyStayApp {
 
-    // ---------------- UC2: ROOM MODEL ----------------
+
     abstract static class Room {
         String type;
         int beds;
