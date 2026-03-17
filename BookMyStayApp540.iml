@@ -7,7 +7,15 @@
       <sourceFolder url="file://$MODULE_DIR$/BookMyStayApp540/src" isTestSource="false" />
 =======
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 63b43c5f1268fa224cf37be3870a8ca6a939f643
+=======
 >>>>>>> 3050a446ef992640aa9f658bc92b38fc754c976c
+>>>>>>> feature/UC7
+=======
+>>>>>>> 3050a446ef992640aa9f658bc92b38fc754c976c
+>>>>>>> aaf3a68273cff4678855b3dcff182d138fb16ed4
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
